@@ -1,0 +1,732 @@
+/*__Global__==================================================================*/
+@font-face {
+    font-family: 'ralewaybold';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('../fonts/raleway-bold-webfont.eot');
+    src: url('../fonts/raleway-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-bold-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-bold-webfont.woff') format('woff'),
+         url('../fonts/raleway-bold-webfont.ttf') format('truetype'),
+         url('../fonts/raleway-bold-webfont.svg#ralewaybold') format('svg');
+}
+
+@font-face {
+    font-family: 'ralewayregular';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('../fonts/raleway-regular-webfont.eot');
+    src: url('../fonts/raleway-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-regular-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-regular-webfont.woff') format('woff'),
+         url('../fonts/raleway-regular-webfont.ttf') format('truetype'),
+         url('../fonts/raleway-regular-webfont.svg#ralewayregular') format('svg');
+}
+
+body {
+  color: #000000;
+
+  font-family: 'ralewayregular', Verdana, Geneva, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+.section {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+  margin: 0;
+}
+
+.main__width {
+  position: relative;
+  /*display: block;*/
+  /*XXX Zastanowić się nad "block"*/
+
+  width: 1050px;
+  margin: 0 auto;
+}
+
+.theme__txt{
+  color: #23ba9c;
+}
+
+.theme__background {
+  background-color: #23ba9c;
+}
+
+.theme__border: {
+  border-color: 1px solid #23ba9c;
+}
+
+.theme__underline {
+  border-bottom: 7px solid #23ba9c;
+}
+
+a[class*="button"] {
+  line-height: 100%;
+}
+
+
+/*__HEADER__==================================================================*/
+
+header {
+  display: block;
+
+  height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: #000000;
+
+  font-family: 'ralewaybold';
+}
+
+.header__menu {
+  list-style-type: none;
+}
+
+.header__menu > li {
+  float: right;
+}
+
+.header__menu > li:first-child {
+  float: left;
+}
+
+.header__button__logo {
+  padding: 12px 60px 12px 0;
+}
+
+.header__button {
+  padding: 12px 0 12px 60px;
+}
+
+.header__button__logo, .header__button {
+  display: block;
+  position: relative;
+
+  color: #ffffff;
+  /*NOTE Anhor domyślnie nie dziedziczy koloru fontu
+  jeżeli posiada atybut heref*/
+}
+
+/*XXX aktywny przycisk menu
+.active {
+  color: #23ba9c;
+}*/
+
+.header__button:hover {
+  color: #23ba9c;
+}
+
+
+
+/*__SECTION1_SLIDESHOW__======================================================*/
+
+.slideshow {
+  height: 500px;
+
+  background: rgba(255,255,255,1);
+  background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 16%, rgba(240,240,240,1) 59%, rgba(230,230,230,1) 92%, rgba(230,230,230,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(16%, rgba(255,255,255,1)), color-stop(59%, rgba(240,240,240,1)), color-stop(92%, rgba(230,230,230,1)), color-stop(100%, rgba(230,230,230,1)));
+  background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 16%, rgba(240,240,240,1) 59%, rgba(230,230,230,1) 92%, rgba(230,230,230,1) 100%);
+  background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 16%, rgba(240,240,240,1) 59%, rgba(230,230,230,1) 92%, rgba(230,230,230,1) 100%);
+  background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 16%, rgba(240,240,240,1) 59%, rgba(230,230,230,1) 92%, rgba(230,230,230,1) 100%);
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 16%, rgba(240,240,240,1) 59%, rgba(230,230,230,1) 92%, rgba(230,230,230,1) 100%);
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0 );
+}
+
+div[class^="slideshow__arrow"] {
+  position: relative;
+
+  display: inline-block;
+  float: left;
+
+  width: 60px;
+  height: 70px;
+  margin: 220px 0;
+
+  text-align: center;
+
+  font-size: 100px;
+  line-height: 53px;
+  }
+
+.arrow__sign:hover {
+  color: #ffffff;
+}
+
+.slideshow__arrow__right {
+  float: right;
+}
+
+/*NOTE używając selektora "slideshow__arrow:nth-of-type(2)"
+nie mogłem wybrać drugiej "slideshow__arrow".
+Używając "slideshow__arrow:nth-of-type(3)" udało mi się.
+Dlaczego?
+CHANGED Zmieniłem klasy na "slideshow__arrow__left" i na "slideshow__arrow__right"*/
+
+.slideshow__box {
+  position: relative;
+
+  display: inline-block;
+  float: left;
+
+  width: 930px;
+}
+
+.slideshow__graphic {
+  position: relative;
+
+  display: inline-block;
+  float: left;
+
+  width: 410px;
+  height: 367px;
+  margin-top: 105px;
+}
+
+.slideshow__txt__box {
+  position: relative;
+
+  display: inline-block;
+  float: left;
+
+  width: 520px;
+  height: 341px;
+  margin-top: 131px;
+
+  text-align: center;
+}
+
+.slideshow__txt__box__heading {
+  position: relative;
+
+  display: block;
+
+  margin: 0 0 30px 0;
+
+  text-transform: uppercase;
+
+  font-size: 42px;
+}
+
+.slideshow__txt__box__heading span {
+  font-family: 'ralewaybold';
+}
+
+/*NOTE Dlaczego gdy ustawiłem w ".slideshow > .main__width > * "
+ustawiając "float: left", gdy ustawiłem w ".slideshow__txt__box__heading > span"
+"float: none" elementy w "spanach" nadal wyświetlały się jako "float: left"*/
+
+.slideshow__txt__box__txt {
+  position: relative;
+
+  display: block;
+
+  margin: 30px 0 45px 0;
+  padding: 15px 10px;
+}
+
+.slideshow__txt__box__button {
+  position: relative;
+
+  padding: 10px 10px;
+
+  text-transform: uppercase;
+
+  color: #ffffff;
+  border-radius: 10px;
+
+  font-size: 22px;
+}
+
+.slideshow__txt__box__button:hover {
+  color: #23ba9c;
+  background-color: #ffffff;
+}
+
+
+
+/*__SECTION2_PRODUCT__========================================================*/
+
+.product {
+  height: 350px;
+
+  background-color: #ffffff;
+}
+
+.product__box {
+  position: relative;
+
+  display: inline-block;
+  float: left;
+
+  width: 330px;
+  height: 226px;
+  margin: 30px 0 84px;
+
+  border: 1px solid #c2c2c2;
+}
+
+.product__box:first-of-type {
+  background-image: url("../images/box1_img.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.product__box:nth-of-type(2) {
+  margin: 30px 30px 84px;
+
+  background-image: url("../images/box2_img.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.product__box:last-of-type {
+  height: 270px;
+  margin: 30px 0 40px 0;
+}
+
+/*NOTE Między górną krawędzią kontenera ".product > .main__width > .product__box"
+a marginesem "product__box" (wysokość kontenera - 350 px,
+wysokość "product__box" - 360px) brakuje 10px. Od czego się odpychają?*/
+
+.product__box__header__background {
+  display: block;
+
+  width: 100%;
+  height: 60px;
+  margin-top: 150px;
+
+  text-align: left;
+
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.product__box .theme__underline {
+  width: 170px;
+  margin: 15px 0 0 20px;
+}
+
+.product__box__header {
+  font-family: 'ralewaybold';
+  font-size: 18px;
+}
+
+.product__box__header span {
+  text-transform: uppercase;
+}
+
+.product__box__txt {
+  padding: 15px 20px 0 20px;
+
+  font-size: 14px;
+}
+
+
+
+/*__SECTION3_PRICE__==========================================================*/
+
+.price {
+  height: 760px;
+
+  background-color: #f0f0f0;
+}
+
+.price__header__box {
+  position: relative;
+
+  display: block;
+  float: left;
+
+  margin: 50px 100% 40px 0;
+}
+
+.price__header__box.theme__underline {
+  width: 300px;
+}
+
+.price__header {
+  text-transform: uppercase;
+
+  color: #000000;
+  /*font-family: 'ralewaybold';*/
+
+  font-size: 32px;
+}
+
+.plan__box {
+  position: relative;
+
+  display: inline-block;
+  float: left;
+
+  width: 330px;
+  height: 520px;
+  margin: 35px 0 60px;
+
+  border: 1px solid #c2c2c2;
+  background-color: #f7f7f7;
+}
+
+.plan__box.highlite {
+  background-color: #23ba9c;
+  border: 1px solid #23ba9c;
+  margin: 35px 30px 0;
+}
+
+.circle__box {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  left: 0;
+
+  height: 60px;
+}
+
+.circle__external {
+  position: relative;
+
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+
+  border: 1px solid #c2c2c2;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.circle__external.highlite {
+  background-color: #23ba9c;
+  border: 1px solid #23ba9c;
+}
+
+.circle__internal {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+
+  border-radius: 50%;
+  background-color: #c2c2c2;
+}
+
+.circle__internal.highlite {
+  background-color: #ffffff;
+}
+
+.plan__header {
+  margin: 40px 0 17px 0;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  font-size: 28px;
+}
+
+.plan__header.highlite {
+  color: #ffffff;
+}
+
+.price__tag {
+  width: 130px;
+  height: 130px;
+  margin: 0 auto;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #c2c2c2;
+  border: 2px solid #c2c2c2;
+  border-radius: 50%;
+  background-color: #ffffff;
+
+  font-family: 'ralewaybold';
+}
+
+.price__tag.highlite {
+  border: 2px solid #23ba9c;
+  color: #23ba9c;
+}
+
+.value__box {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+  height: 80px;
+  margin: 30px 0 20px;
+}
+
+.value__whole {
+  font-size: 42px;  line-height: 100%;}
+
+.value__superscript {
+  vertical-align: super;
+
+  font-size: 24px;
+  line-height: 100%;
+}
+
+.value__currency {
+  font-size: 20px;
+  line-height: 100%;
+}
+
+.plan__services {
+  margin: 30px 0;
+
+  text-align: center;
+  vertical-align: middle;
+
+  color: #737373;
+  border-top: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+}
+
+.plan__services.highlite {
+  border: 0;
+}
+
+.plan__asset {
+  display: block;
+
+  padding: 5px 0;
+
+  font-size: 22px;
+}
+
+.plan__asset.highlite {
+  padding: 7px 0;
+}
+
+.plan__asset:nth-of-type(odd) {
+  background-color: #e3e3e3;
+}
+
+.plan__asset.highlite:nth-of-type(odd) {
+  background-color: #ffffff;
+}
+
+.plan__asset:nth-of-type(even) {
+  background-color: #f0f0f0;
+}
+
+.plan__button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 130px;
+  margin: 20px 100px;
+  padding: 10px 0;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #ffffff;
+  border-radius: 10px;
+}
+
+.plan__button.highlite {
+  color: #23ba9c;
+  background-color: #ffffff;
+}
+
+
+
+/*__SECTION4_CONTACT__========================================================*/
+
+.contact {
+  height: 587px;
+
+  background-color: #ffffff;
+}
+
+.contact__header__box {
+  position: relative;
+
+  display: block;
+  float: left;
+
+  margin: 50px 100% 40px 0;
+}
+
+.contact__header__box.theme__underline {
+  width: 300px;
+}
+
+.contact__header {
+  text-transform: uppercase;
+
+ color: #000000;
+
+ font-size: 32px;
+}
+
+.contact__form {
+  display: block;
+  position: relative;
+
+  width: 100%;
+}
+
+.contact__form__box__left {
+  display: inline-block;
+  position: relative;
+  float: left;
+  width: 650px;
+  margin: 0 50px 50px 0;
+}
+
+.contact__form__box__right {
+  display: inline-block;
+  position: relative;
+  float: left;
+  width: 350px;
+  margin: 0 0 50px 0;
+}
+
+.contact__user__data {
+  width: 650px;
+  height: 70px;
+  border: 1px solid #a6e3d1;
+  color: #c2c2c2;
+  padding-left: 15px;
+  margin: 0;
+  display: block;
+  position: relative;
+  float: left;
+  font-family: 'ralewayregular';
+  font-size: 32px;
+}
+
+.contact__user__data[name="user__email"] {
+  margin: 25px 0;
+}
+
+.contact__user__data[name="user__message"] {
+  height: 200px;
+  padding-top: 15px;
+}
+
+.form__graphic {
+  width: 264px;
+  height: 210px;
+  display: block;
+  position: relative;
+  margin: 0 auto 31px;
+}
+
+.agreed {
+  width: 100%;
+  height: 48px;
+  margin: 0 0 31px 0;
+  position: relative;
+  display: block;
+}
+
+.agreed__graphic {
+  height: 48px;
+  width: 48px;
+  padding: 4px 0;
+  border: 1px solid #a6e3d1;
+  position: relative;
+  display: inline-block;
+  float: left;
+}
+
+.agreed__txt {
+  font-size: 19px;
+
+  color: #c2c2c2;
+  padding: 0 15px;
+  display: table-cell;
+  vertical-align: middle;
+  line-height: 135%;
+}
+
+.agreed__button {
+  width: 350px;
+  height: 70px;
+  font-family:'ralewaybold';
+  font-size: 32px;
+  padding: 15px auto;
+  border-radius: 10px;
+  display: block;
+  position: relative;
+  color: #ffffff;
+  text-transform: uppercase;
+  outline: 0;
+  margin: 0 auto;
+  border: 0;
+}
+
+
+
+/*__FOOTER__==================================================================*/
+
+footer {
+  height: 120px;
+  background-color: #ffffff;
+}
+
+.footer__menu {
+  list-style-type: none;
+}
+
+.footer__menu li {
+  display: block;
+  position: relative;
+  float: right;
+  padding: 0;
+  margin: 41px 0 0 70px;
+}
+
+.footer__menu .footer__copyright__li{
+  float: left;
+  margin: 41px 0;
+}
+
+.footer__copyright__header {
+  color: #c2c2c2;
+}
+
+.footer__logo {
+  color: #c2c2c2;
+  text-transform: uppercase;
+}
+
+.footer__logo span {
+  font-family: 'ralewaybold';
+}
+
+.footer__menu .footer__social__li {
+  margin-top: 27px;
+}
+
+.footer__social__list li {
+  margin: 0 0 0 2px;
+}
+
+.footer__social__icon {
+  width: 35px;
+  height: 35px;
+  margin: 0;
+}

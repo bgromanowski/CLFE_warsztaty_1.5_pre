@@ -1,0 +1,454 @@
+/*__Global__*/
+@font-face {
+    font-family: 'ralewaybold';
+    src: url('../fonts/raleway-bold-webfont.eot');
+    src: url('../fonts/raleway-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-bold-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-bold-webfont.woff') format('woff'),
+         url('../fonts/raleway-bold-webfont.ttf') format('truetype'),
+         url('../fonts/raleway-bold-webfont.svg#ralewaybold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ralewayregular';
+    src: url('../fonts/raleway-regular-webfont.eot');
+    src: url('../fonts/raleway-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-regular-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-regular-webfont.woff') format('woff'),
+         url('../fonts/raleway-regular-webfont.ttf') format('truetype'),
+         url('../fonts/raleway-regular-webfont.svg#ralewayregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  font-family: 'ralewayregular', Verdana, Geneva, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+/*DLACZEGO text-decoration: none; działa tylko z selektorem  a (natomiast nie działa w body)*/
+a {
+  text-decoration: none;
+}
+
+
+.section {
+  width: 100%;
+  display: block;
+}
+
+.main__width {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.button {
+  padding: 10px 40px;
+  border-radius: 10px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.main__heading {
+  width: 300px;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.box {
+  width: 360px;
+}
+
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+
+.theme__txt{
+  color: #23ba9c;
+}
+
+.theme__background {
+  background-color: #23ba9c;
+}
+
+.theme__underline {
+  border-bottom: 7px solid #23ba9c;
+}
+
+
+
+/*_HEADER_*/
+
+header {
+  height: 40px;
+  background-color: black;
+  display: block;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: 'ralewaybold';
+}
+
+.header__logo {
+  display: inline-block;
+  float: left;
+  padding: 12px 50px;
+}
+
+.header__menu {
+  float: right;
+}
+
+.header__menu > ul > {
+ border: 1px solid red;
+}
+
+.header__menu > ul > li {
+  display: inline-block;
+}
+
+.header__menu > ul > li > a{
+  padding: 12px 50px;
+}
+
+
+
+/*_SECTION1_SLIDESHOW_*/
+
+.slideshow {
+  height: 510px;
+  background: rgba(255,255,255,1);
+  background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 16%, rgba(240,240,240,1) 59%, rgba(230,230,230,1) 92%, rgba(230,230,230,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(16%, rgba(255,255,255,1)), color-stop(59%, rgba(240,240,240,1)), color-stop(92%, rgba(230,230,230,1)), color-stop(100%, rgba(230,230,230,1)));
+  background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 16%, rgba(240,240,240,1) 59%, rgba(230,230,230,1) 92%, rgba(230,230,230,1) 100%);
+  background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 16%, rgba(240,240,240,1) 59%, rgba(230,230,230,1) 92%, rgba(230,230,230,1) 100%);
+  background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 16%, rgba(240,240,240,1) 59%, rgba(230,230,230,1) 92%, rgba(230,230,230,1) 100%);
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 16%, rgba(240,240,240,1) 59%, rgba(230,230,230,1) 92%, rgba(230,230,230,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0 );
+}
+
+.slideshow > .main__width > .arrow {
+  border: 1px dotted red;
+
+  width: 60px;
+  height: 70px;
+  margin: 220px 0;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  line-height: 53px;
+  font-size: 100px;
+}
+
+.slideshow__graphic {
+  width: 460px;
+  height: 412px;
+  margin-top: 70px; /*20px 0 60px;*/
+  display: inline-block;
+  position: relative;
+  float: left;
+}
+
+.slideshow__txt {
+  width: 620px;
+  height: 382px;
+  margin-top: 100px; /*60px 0 30px;*/
+  background-color: rgba(255, 255, 255, 0);
+  display: inline-block;
+  position: relative;
+  float: left;
+  text-align: center;
+}
+
+.slideshow__txt > h1 {
+  display: block;
+  font-size: 48px;
+  text-transform: uppercase;
+}
+
+.slideshow__txt > h1 > .theme__txt{
+  font-family: 'ralewaybold';
+}
+
+.slideshow__txt > p {
+  padding: 45px 25px;
+  display: block;
+  font-size: 18px;
+}
+
+.slideshow__txt > a.button.big {
+  margin: 0 158px 45px 158px;
+  color: #ffffff;
+  font-size: 28px;
+}
+
+
+
+/*_SECTION2_PRODUCT_*/
+
+.product {
+  height: 350px;
+  background-color: #ffffff;
+}
+
+.product > .main__width > .box {
+  height: 265px;
+  margin: 25px 0;
+  border: 2px solid #c2c2c2;
+  display: inline-block;
+  float: left;
+}
+
+.product > .main__width > .box:first-child {
+  background-image:url(../images/box1_img.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.product > .main__width > .box:nth-child(2) {
+  background-image:url(../images/box2_img.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin: 25px 60px;
+}
+
+.product > .main__width > .box:last-child {
+  height: 290px;
+}
+
+.product > .main__width > .box:nth-child(-n+2) > .product__name {
+  width: 100%;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin-top: 180px;
+  display: block;
+}
+
+.product > .main__width > .box > div > .theme__underline {
+  width: 170px;
+  margin: 5px 0 0 10px;
+  font-family: 'ralewaybold';
+  font-size: 18px;
+}
+
+.product > .main__width > .box:last-child > div > .theme__underline {
+  margin: 15px 0 0 20px;
+}
+
+.product > .main__width > .box:last-child > div > p {
+  padding: 5px 20px;
+  margin-top: 5px;
+}
+
+.product > .main__width > .box > div > .theme__underline > h2 > span {
+  text-transform: uppercase;
+}
+
+
+
+/*_SECTION3_PRICE_*/
+
+.price {
+  height: 800px;
+  background-color: #f0f0f0;
+}
+/*Dlaczego gdy nie ustawię 'boarder' dla 'main__width', 'main__heading' marginesem
+odpycha całą sekcję 'PRIZE' od sekcji 'PRODUCTS'. W przeciwnym wypadku
+rozjeżdża się cała sekcja.*/
+.price > .main__width {
+  width: 1202px;
+  border: 1px dotted rgba(255, 255, 255, 0);
+  /*position: relative;*/
+}
+
+.price > .main__width > .main__heading {
+  margin: 20px 0 70px 0;
+  display: block;
+  position: relative;
+  color: #ffffff;
+}
+
+.price > .main__width > .box {
+  height: 600px;
+  background-color: #f7f7f7;
+  border: 3px solid #c2c2c2;
+  margin-top: 35;
+  display: inline-block;
+  position: relative;
+  float: left;
+}
+
+/*Dlaczego :nth-child(3) a nie :nth-child(2)*/
+.price > .main__width > .box:nth-child(3) {
+  background-color: #23ba9c;
+  border: 3px solid #23ba9c;
+  margin: 0 60px;
+}
+
+.price > .main__width > .box > .circle__box {
+  height: 60px;
+  top: -40px;
+  right: 0;
+  left: 0;
+  position: absolute;
+}
+
+.price > .main__width > .box > .circle__box > .circle__external {
+  width: 60px;
+  height: 60px;
+  background-color: #ffffff;
+  border: 3px solid #c2c2c2;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.price > .main__width > .box:nth-child(3) > .circle__box > .circle__external {
+  background-color: #23ba9c;
+  border: 3px solid #23ba9c;
+}
+
+.price > .main__width > .box > .circle__box > .circle__external > .circle__internal {
+  width: 30px;
+  height: 30px;
+  background-color: #c2c2c2;
+  border-radius: 50%;
+  margin: 0 auto;
+  top: 12px;  /*13*/
+  left: 12px; /*13*/
+  position: absolute;
+}
+
+.price > .main__width > .box:nth-child(3) > .circle__box > .circle__external > .circle__internal {
+  background-color: #ffffff;
+}
+
+.price > .main__width > .box > h1 {
+  margin: 40px 0 17px 0;
+  font-size: 32px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.price > .main__width > .box:nth-child(3) > h1 {
+  color: #ffffff;
+}
+
+.price > .main__width > .box > .price__tag {
+  width: 150px;
+  height: 150px;
+  background-color: #ffffff;
+  border: 3px solid #c2c2c2;
+  border-radius: 50%;
+  margin: 0 auto;
+  color: #c2c2c2;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'ralewaybold';
+}
+
+.price > .main__width > .box:nth-child(3) > .price__tag {
+  border: 3px solid #23ba9c;
+}
+
+.price > .main__width > .box > .price__tag > p {
+  width: 100%;
+  height: 130px;
+  margin: 15px auto;
+  display: block;
+  position: relative;
+}
+
+.price > .main__width > .box > .price__tag > p > .value__font {
+  font-size: 45px;
+}
+
+.price > .main__width > .box > .price__tag > p > .value__font > .value__superscript {
+  vertical-align: super;
+  font-size: 24px;
+}
+
+.price > .main__width > .box > .price__tag > p > .currency {
+  font-size: 24px;
+}
+
+.price > .main__width > .box > .services {
+  margin: 30px 0;
+  border-top: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+  color: #737373;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.price > .main__width > .box:nth-child(3) > .services {
+  border: 0;
+}
+
+.price > .main__width > .box > .services > li {
+  padding: 5px 0;
+  display: block;
+  font-size: 28px;
+}
+
+.price > .main__width > .box:nth-child(3) > .services > li {
+  padding: 7px 0;
+}
+
+.price > .main__width > .box > .services > li:nth-child(odd) {
+  background-color: #e3e3e3;
+}
+
+.price > .main__width > .box:nth-child(3) > .services > li:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.price > .main__width > .box > .services > li:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+.price > .main__width > .box > a.button.small {
+  margin: 0 99px 20px 99px;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.price > .main__width > .box:nth-child(3) > a.button.small {
+  background-color: #ffffff;
+  color: #23ba9c;
+}
+
+
+
+/*_SECTION4_CONTACT_*/
+.contact {
+  height: 750px;
+}
+
+.contact > .main__width > .main__heading {
+  margin: 20px 0 70px 0;
+  display: block;
+  position: relative;
+}
+
+.contact > .main__width > .form{
+  border: 1px dashed red;
+
+  width: 100%;
+  height: 700px;
+}
